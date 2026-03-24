@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 
 namespace poo02.Entidades;
 
-public class ContaBancaria
+public abstract class ContaBancaria
 {
 
     #region Construtores
@@ -36,12 +36,12 @@ public class ContaBancaria
 
     #region Propriedades Privadas
 
-    private decimal _saldo;
-    private string _numero;
+    protected decimal _saldo;
+    protected string _numero;
 
-    private string _titular;
+    protected string _titular;
 
-    private string _cpf;
+    protected string _cpf;
 
     #endregion
 
@@ -71,7 +71,7 @@ public class ContaBancaria
 
 
     #region Métodos Públicos
-    public void Depositar(decimal valor)
+    public virtual void Depositar(decimal valor)
     {
         if(valor <= 0)
         {
@@ -80,7 +80,7 @@ public class ContaBancaria
         _saldo += valor;
     }
 
-    public void Sacar(decimal valor)
+    public virtual void Sacar(decimal valor)
     {
         if(valor <= 0)
         {
