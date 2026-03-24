@@ -1,0 +1,14 @@
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\bin\Debug\net10.0\poo02.exe
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\bin\Debug\net10.0\poo02.deps.json
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\bin\Debug\net10.0\poo02.runtimeconfig.json
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\bin\Debug\net10.0\poo02.dll
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\bin\Debug\net10.0\poo02.pdb
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.AssemblyInfoInputs.cache
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.AssemblyInfo.cs
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.csproj.CoreCompileInputs.cache
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.dll
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\refint\poo02.dll
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.pdb
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\poo02.genruntimeconfig.cache
+C:\Users\sofiap\Documents\ProjetoPOO\poo02\poo02\obj\Debug\net10.0\ref\poo02.dll
