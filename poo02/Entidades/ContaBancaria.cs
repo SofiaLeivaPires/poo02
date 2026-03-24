@@ -68,4 +68,30 @@ public class ContaBancaria
         get { return _saldo;}
     }
     #endregion
+
+
+    #region Métodos Públicos
+    public void Depositar(decimal valor)
+    {
+        if(valor <= 0)
+        {
+            throw new ArgumentException("Valor de depósito deve ser positivo.");
+        }
+        _saldo += valor;
+    }
+
+    public void Sacar(decimal valor)
+    {
+        if(valor <= 0)
+        {
+            throw new ArgumentException("Valor de saque deve ser positivo.");
+        }
+        if(valor > _saldo)
+        {
+            throw new InvalidOperationException("Saldo insuficiente para saque.");
+        }
+        _saldo -= valor;
+    }
+
+    #endregion
 }

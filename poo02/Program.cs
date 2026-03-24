@@ -13,10 +13,12 @@ while (executando)
 {
     Console.Clear();
     Console.WriteLine("=== Sistema Bancário ===");
-    Console.WriteLine("1. Criar conta");
-    Console.WriteLine("2. Listar contas");
+    Console.WriteLine("1. Detalhar contas");
+    Console.WriteLine("2. Criar contas");
+    Console.WriteLine("3. Depositar");
+    Console.WriteLine("4. Sacar");
     Console.WriteLine("0. Sair");
-    Console.Write("\nEscolha");
+    Console.Write("\nEscolha: ");
 
 
     var opcao = Console.ReadLine();
@@ -26,11 +28,18 @@ while (executando)
         switch (opcao)
         {
             case "1":
-                CriarContas();  
+                DetalharContas(); 
                 break;
             case "2":
-                ListarContas();  
+                CriarContas();  
                 break;
+            case "3":
+                Depositar();  
+                break;
+            case "4":
+                Sacar();  
+                break;
+
             case "0":
                 executando = false;
                 break;
@@ -45,16 +54,11 @@ while (executando)
         
     }
 
-
 }
-
 
 #region Métodos
 void ListarContas()
 {
-    Console.Clear();
-    Console.WriteLine("\n ####CONTAS####\n");
-
     Console.WriteLine("--------------------------------------------------");
     Console.WriteLine($"{"índice",6} | {"Número", -10} | {"Titular", -40} | {"CPF", -14} | { "Saldo", 15}");
     Console.WriteLine("--------------------------------------------------");
@@ -67,8 +71,68 @@ void ListarContas()
 
     Console.WriteLine("--------------------------------------------------");
     Console.WriteLine();
+}
+
+void DetalharContas()
+{
+    Console.Clear();
+    Console.WriteLine("=== Detalhes das Contas ===");
+    ListarContas();
+    
+    Console.WriteLine();
+
+    if (contas.Any())
+    {
+        Console.Write("Conta (índice):");
+        int i = int.Parse(Console.ReadLine()!);
+
+        ContaBancaria conta = contas[i];
+
+        Console.Clear();
+        Console.WriteLine($"Conta: {conta.Numero}");
+        Console.WriteLine($"Titular: {conta.Titular}");     
+        Console.WriteLine($"CPF: {conta.Cpf}");
+        Console.WriteLine($"Saldo: {conta.Saldo:C}");
+    }
     Pausar();
 }
+
+void Depositar()
+{
+    Console.Clear();
+    Console.WriteLine("=== Depósito ===");
+    ListarContas();
+
+    Console.Write("Conta (índice):");
+    int i = int.Parse(Console.ReadLine()!);
+
+    Console.Write("Valor: ");
+    decimal valor = decimal.Parse(Console.ReadLine()!);
+
+    contas[i].Depositar(valor);
+
+    Console.WriteLine("Depósito realizado com sucesso!");
+    Pausar();
+}
+
+void Sacar()
+{
+    Console.Clear();
+    Console.WriteLine("=== Saque ===");
+    ListarContas();
+
+    Console.Write("Conta (índice):");
+    int i = int.Parse(Console.ReadLine()!);
+
+    Console.Write("Valor: ");
+    decimal valor = decimal.Parse(Console.ReadLine()!);
+
+    contas[i].Sacar(valor);
+
+    Console.WriteLine("Saque realizado com sucesso!");
+    Pausar();
+}
+
 
 void CriarContas()
 {
